@@ -37,9 +37,13 @@ client.on("message", message =>
     {
         client.commands.get('hi').execute(message, args);
     }
-    else if(command === "info")
+    else if(command === "info" || command === "help")
     {
-        client.commands.get('info').execute(message, args);
+        client.commands.get('help').execute(message, args, Discord);
+    }
+    else if(command === "kill")
+    {
+        client.commands.get('kill').execute(message, args);
     }
 });
 

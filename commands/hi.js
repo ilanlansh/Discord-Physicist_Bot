@@ -4,6 +4,6 @@ module.exports =
     description: "this command is hi.",
     execute(message, args)
     {
-        message.channel.send("Hi! 😃");
+        message.channel.send("Hello! 😃");
     }
 }
