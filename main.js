@@ -39,11 +39,11 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord);
+        client.commands.get('help').execute(message, args);
     }
     else if(command === "kill")
     {
-        client.commands.get('kill').execute(message, args);
+        client.commands.get('kill').execute(message, args, Discord, client);
     }
 });
 

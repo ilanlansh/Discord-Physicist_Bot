@@ -9,7 +9,8 @@ module.exports =
             .setTitle("Help (1/1)")
             .setDescription("A list of commands")
             .setThumbnail('https://cdn.discordapp.com/avatars/793219092017840139/6d9a10d29263aea4e9a511e250673d32.png?size=128')
-            .addFields(
+            .addFields
+            (
                 { name: '**;help** or **;info**', value: 'Shows this list.' },
                 { name: '**;hi**', value: 'Hello! 😃' },
                 { name: '**;kill**', value: 'Command under development...' }
