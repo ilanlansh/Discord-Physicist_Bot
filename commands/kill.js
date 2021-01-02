@@ -10,11 +10,11 @@ module.exports =
         let response = await fetch(url);
         let json = await response.json();
 
-        let gif = json.results[Math.floor(Math.random() * json.results.length)].url;
+        let gif = json.results[Math.floor(Math.random() * json.results.length)].media[0].gif.url;
         
         try
         {
-            let killed = client.users.cache.find(user => user.id === (args[0].replace("<@!", "").replace(">", "")));
+            var killed = client.users.cache.find(user => user.id === (args[0].replace("<@!", "").replace(">", "")));
             var killedtag = killed.tag;
         }
         catch(e)

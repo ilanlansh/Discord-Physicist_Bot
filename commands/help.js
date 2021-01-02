@@ -13,7 +13,7 @@ module.exports =
             (
                 { name: '**;help** or **;info**', value: 'Shows this list.' },
                 { name: '**;hi**', value: 'Hello! 😃' },
-                { name: '**;kill**', value: 'Command under development...' }
+                { name: '**;kill**', value: 'This command lets you "kill" someone.\nUsage: ;kill <@user>' }
             )
 	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', "https://cdn.discordapp.com/avatars/381379655665713155/72a78d2d4e892bb0ac00be2e75e9c891.png?size=128");
 
