@@ -45,6 +45,10 @@ client.on("message", message =>
     {
         client.commands.get('kill').execute(message, args, Discord, client);
     }
+    else if(command === "status")
+    {
+        client.commands.get('status').execute(message, args, client);
+    }
 });
 
 client.login(process.env.TOKEN);
