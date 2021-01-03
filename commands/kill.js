@@ -17,10 +17,18 @@ module.exports =
             var killed = client.users.cache.find(user => user.id === (args[0].replace("<@!", "").replace(">", "")));
             var killedtag = killed.tag;
         }
-        catch(e)
+        catch(e1)
         {
-            message.channel.send("please provide a valid user mention.");
-            return;
+            try
+            {
+                var killed = client.users.cache.find(user => user.id === (args[0].replace("<@", "").replace(">", "")));
+                var killedtag = killed.tag;
+            }
+            catch(e2)
+            {
+                message.channel.send("please provide a valid user mention.");
+                return;
+            }
         }
 
         const embed = new Discord.MessageEmbed()
