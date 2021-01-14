@@ -1,12 +1,11 @@
 
 const Discord = require('discord.js');
 require('dotenv').config();
+const fs = require('fs');
 
 const client = new Discord.Client();
  
 const prefix = ';';
- 
-const fs = require('fs');
  
 client.commands = new Discord.Collection();
  
@@ -36,6 +35,10 @@ client.on("message", message =>
     if(command === "hi")
     {
         client.commands.get('hi').execute(message, args);
+    }
+    else if(command === "ping")
+    {
+        client.commands.get('ping').execute(message, args);
     }
     else if(command === "info" || command === "help")
     {
