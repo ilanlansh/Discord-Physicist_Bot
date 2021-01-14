@@ -15,14 +15,12 @@ module.exports =
         try
         {
             var killed = client.users.cache.find(user => user.id === (args[0].replace("<@!", "").replace(">", "")));
-            var killedtag = killed.tag;
         }
         catch(e1)
         {
             try
             {
                 var killed = client.users.cache.find(user => user.id === (args[0].replace("<@", "").replace(">", "")));
-                var killedtag = killed.tag;
             }
             catch(e2)
             {
@@ -33,7 +31,7 @@ module.exports =
 
         const embed = new Discord.MessageEmbed()
             .setColor('#11f5de')
-            .setTitle(`${message.author.tag}   just killed   ${killedtag} !`)
+            .setTitle(`User   ${client.guilds.cache.get("775377823753568277").member(message.author).displayName}   just killed   ${client.guilds.cache.get("775377823753568277").member(killed).displayName} !`)
             .setImage(gif)
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', "https://cdn.discordapp.com/avatars/381379655665713155/72a78d2d4e892bb0ac00be2e75e9c891.png?size=128");
 
