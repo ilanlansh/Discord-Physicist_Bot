@@ -6,7 +6,7 @@ module.exports =
     description: "this command kills. 🙂",
     async execute(message, args, Discord, client)
     {
-        let url = `https://api.tenor.com/v1/search?q=spaceship&key=${process.env.TENORKEY}&limit=50`;
+        let url = `https://api.tenor.com/v1/search?q=rocket&key=${process.env.TENORKEY}&limit=50`;
         let response = await fetch(url);
         let json = await response.json();
 
