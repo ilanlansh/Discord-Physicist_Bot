@@ -31,7 +31,7 @@ module.exports =
 
         const embed = new Discord.MessageEmbed()
             .setColor('#11f5de')
-            .setTitle(`User   ${client.guilds.cache.get("775377823753568277").member(message.author).displayName}   just launched   ${client.guilds.cache.get("775377823753568277").member(launched).displayName}   into space!`)
+            .setTitle(`User   ${client.guilds.cache.get(message.guild.id).member(message.author).displayName}   just launched   ${client.guilds.cache.get(message.guild.id).member(launched).displayName}   into space!`)
             .setImage(gif)
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', "https://cdn.discordapp.com/avatars/381379655665713155/72a78d2d4e892bb0ac00be2e75e9c891.png?size=128");
 
