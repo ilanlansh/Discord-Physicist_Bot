@@ -2,13 +2,13 @@ module.exports =
 {
     name: 'help',
     description: "this command gives a list of commands.",
-    execute(message, args, Discord, creatorAvatarUrl)
+    execute(message, args, Discord, client, creatorAvatarUrl)
     {
         const embed = new Discord.MessageEmbed()
             .setColor('#11f5de')
             .setTitle("Help (1/1)")
             .setDescription("This is a bot originally made for yaakov3h's physics Discord server. The bot was made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://ilan.shrir.net/).\nHere's a list of commands:")
-            .setThumbnail('https://cdn.discordapp.com/avatars/793219092017840139/6d9a10d29263aea4e9a511e250673d32.png?size=128')
+            .setThumbnail(client.user.displayAvatarURL())
             .addFields
             (
                 {

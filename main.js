@@ -7,7 +7,8 @@ const client = new Discord.Client();
  
 const prefix = ';';
 
-const creatorAvatarUrl = client.guilds.cache.find(guild => guild.id === "775377823753568277").members.cache.find(user => user.id === "381379655665713155").user.displayAvatarURL();
+let creatorAvatarUrl;
+client.users.fetch("381379655665713155").then(user => { creatorAvatarUrl = user.displayAvatarURL() }); // = "https://cdn.discordapp.com/avatars/381379655665713155/72a78d2d4e892bb0ac00be2e75e9c891.png?size=128";
  
 client.commands = new Discord.Collection();
  
@@ -44,7 +45,7 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord, creatorAvatarUrl);
+        client.commands.get('help').execute(message, args, Discord, client, creatorAvatarUrl);
     }
     else if(command === "kill")
     {
