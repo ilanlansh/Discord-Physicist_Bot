@@ -12,21 +12,12 @@ module.exports =
 
         let gif = json.results[Math.floor(Math.random() * json.results.length)].media[0].gif.url;
         
-        try
+        let launched = message.mentions.users.first();
+
+        if(!launched)
         {
-            var launched = client.users.cache.find(user => user.id === (args[0].replace("<@!", "").replace(">", "")));
-        }
-        catch(e1)
-        {
-            try
-            {
-                var launched = client.users.cache.find(user => user.id === (args[0].replace("<@", "").replace(">", "")));
-            }
-            catch(e2)
-            {
-                message.channel.send("please provide a valid user mention.");
-                return;
-            }
+            message.channel.send("please provide a valid user mention.");
+            return;
         }
 
         const embed = new Discord.MessageEmbed()
