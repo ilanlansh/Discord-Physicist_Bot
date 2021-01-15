@@ -6,6 +6,8 @@ const fs = require('fs');
 const client = new Discord.Client();
  
 const prefix = ';';
+
+const creatorAvatarUrl = client.guilds.cache.find(guild => guild.id === "775377823753568277").members.cache.find(user => user.id === "381379655665713155").user.displayAvatarURL();
  
 client.commands = new Discord.Collection();
  
@@ -42,11 +44,11 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord);
+        client.commands.get('help').execute(message, args, Discord, creatorAvatarUrl);
     }
     else if(command === "kill")
     {
-        client.commands.get('kill').execute(message, args, Discord, client);
+        client.commands.get('kill').execute(message, args, Discord, client, creatorAvatarUrl);
     }
     else if(command === "status")
     {
@@ -54,7 +56,7 @@ client.on("message", message =>
     }
     else if(command === "space" || command === "launch" || command === "dispatch")
     {
-        client.commands.get('space').execute(message, args, Discord, client);
+        client.commands.get('space').execute(message, args, Discord, client, creatorAvatarUrl);
     }
 });
 
