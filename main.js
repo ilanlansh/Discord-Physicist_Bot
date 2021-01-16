@@ -7,9 +7,14 @@ const client = new Discord.Client();
  
 const prefix = ';';
 
-let creatorAvatarUrl;
-client.users.fetch("381379655665713155").then(user => { creatorAvatarUrl = user.displayAvatarURL() }); // = "https://cdn.discordapp.com/avatars/381379655665713155/72a78d2d4e892bb0ac00be2e75e9c891.png?size=128";
- 
+let data = function()
+{
+    this.creatorAvatarUrl;
+    this.guild;
+};
+client.users.fetch("381379655665713155").then(user => { data.creatorAvatarUrl = user.displayAvatarURL() });
+client.guilds.fetch("775377823753568277").then(guild => { data.guild = guild });
+
 client.commands = new Discord.Collection();
  
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -45,11 +50,11 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord, client, creatorAvatarUrl);
+        client.commands.get('help').execute(message, args, Discord, client, data);
     }
     else if(command === "kill")
     {
-        client.commands.get('kill').execute(message, args, Discord, client, creatorAvatarUrl);
+        client.commands.get('kill').execute(message, args, Discord, client, data);
     }
     else if(command === "status")
     {
@@ -57,7 +62,7 @@ client.on("message", message =>
     }
     else if(command === "space" || command === "launch" || command === "dispatch")
     {
-        client.commands.get('space').execute(message, args, Discord, client, creatorAvatarUrl);
+        client.commands.get('space').execute(message, args, Discord, client, data);
     }
 });
 

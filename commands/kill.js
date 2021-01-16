@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'kill',
     description: "this command kills. 🙂",
-    async execute(message, args, Discord, client, creatorAvatarUrl)
+    async execute(message, args, Discord, client, data)
     {
         let url = `https://api.tenor.com/v1/search?q=kill&key=${process.env.TENORKEY}&limit=50`;
         let response = await fetch(url);
@@ -24,7 +24,7 @@ module.exports =
             .setColor('#11f5de')
             .setTitle(`User   ${client.guilds.cache.get(message.guild.id).member(message.author).displayName}   just killed   ${client.guilds.cache.get(message.guild.id).member(killed).displayName} !`)
             .setImage(gif)
-            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', creatorAvatarUrl);
+            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.creatorAvatarUrl);
 
         message.channel.send(embed);
     }

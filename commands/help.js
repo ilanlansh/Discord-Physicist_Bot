@@ -2,7 +2,7 @@ module.exports =
 {
     name: 'help',
     description: "this command gives a list of commands.",
-    execute(message, args, Discord, client, creatorAvatarUrl)
+    execute(message, args, Discord, client, data)
     {
         const embed = new Discord.MessageEmbed()
             .setColor('#11f5de')
@@ -36,7 +36,7 @@ module.exports =
                     value: 'This command lets you launch someone into space.'
                 }
             )
-	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', creatorAvatarUrl);
+	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.creatorAvatarUrl);
         message.channel.send(embed);
     }
 }
