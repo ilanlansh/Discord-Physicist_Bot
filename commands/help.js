@@ -5,7 +5,7 @@ module.exports =
     execute(message, args, Discord, client, data)
     {
         const embed = new Discord.MessageEmbed()
-            .setColor('#11f5de')
+            .setColor(data.color)
             .setTitle("Help (1/1)")
             .setDescription("This is a bot originally made for yaakov3h's physics Discord server. The bot was made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://ilan.shrir.net/).\nHere's a list of commands:")
             .setThumbnail(client.user.displayAvatarURL())

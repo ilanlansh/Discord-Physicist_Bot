@@ -11,6 +11,7 @@ let data = () =>
 {
     this.creatorAvatarUrl;
     this.guild;
+    this.color = "#11f5de"
 };
 client.users.fetch("381379655665713155").then(user => { data.creatorAvatarUrl = user.displayAvatarURL() });
 client.guilds.fetch("775377823753568277").then(guild => { data.guild = guild });
