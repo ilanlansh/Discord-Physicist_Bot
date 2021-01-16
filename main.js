@@ -7,7 +7,7 @@ const client = new Discord.Client();
  
 const prefix = ';';
 
-let data = function()
+let data = () =>
 {
     this.creatorAvatarUrl;
     this.guild;
