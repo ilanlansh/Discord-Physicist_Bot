@@ -22,7 +22,7 @@ module.exports =
 
         const embed = new Discord.MessageEmbed()
             .setColor('#11f5de')
-            .setTitle(`User   ${data.guild.member(message.author).displayName}   just launched   ${client.guilds.cache.get(message.guild.id).member(launched).displayName}   into space!`)
+            .setTitle(`User   ${data.guild.member(message.author).displayName}   just launched   ${data.guild.member(launched).displayName}   into space!`)
             .setImage(gif)
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.creatorAvararUrl);
 
