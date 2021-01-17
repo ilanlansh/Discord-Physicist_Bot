@@ -24,7 +24,7 @@ module.exports =
             .setColor(data.color)
             .setTitle(`User   ${data.guild.member(message.author).displayName}   just killed   ${data.guild.member(killed).displayName} !`)
             .setImage(gif)
-            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.creatorAvatarUrl);
+            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.avURL);
 
         message.channel.send(embed);
     }

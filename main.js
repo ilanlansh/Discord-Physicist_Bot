@@ -9,11 +9,11 @@ const prefix = ';';
 
 let data = () =>
 {
-    this.creatorAvatarUrl;
+    this.avURL;
     this.guild;
     this.color;
 };
-client.users.fetch("381379655665713155").then(user => { data.creatorAvatarUrl = user.displayAvatarURL() });
+client.users.fetch("381379655665713155").then(user => { data.avURL = user.displayAvatarURL() });
 client.guilds.fetch("775377823753568277").then(guild => { data.guild = guild });
 data.color = '#11f5de';
 
@@ -64,7 +64,7 @@ client.on("message", message =>
     }
     else if(command === "space" || command === "launch" || command === "dispatch")
     {
-        client.commands.get('space').execute(message, args, Discord, client, data);
+        client.commands.get('space').execute(message, args, Discord, data);
     }
 });
 
