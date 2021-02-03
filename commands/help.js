@@ -1,42 +1,42 @@
 module.exports = 
 {
     name: 'help',
-    description: "this command gives a list of commands.",
+    description: "This command sends info and instructions about the bot.",
     execute(message, args, Discord, client, embedArgs)
     {
-        const embed = new Discord.MessageEmbed()
+        arg = args.join(" ");
+        if(!arg)
+        {
+            const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)
-            .setTitle("Help (1/1)")
-            .setDescription("This is a bot originally made for yaakov3h's physics Discord server. The bot was made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://ilan.shrir.net/).\nHere's a list of commands:")
+            .setTitle("Help")
+            .setDescription("This bot was made for the Space Generation Israel Discord server. Made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://github.com/ilanlansh/Discord-BB8_Bot).")
             .setThumbnail(client.user.displayAvatarURL())
             .addFields
             (
                 {
-                    name: ';help / ;info',
-                    value: 'Shows this message.'
+                    name: 'For a list of commands',
+                    value: 'type `;help commands`',
                 },
                 {
-                    name: ';hi',
-                    value: 'This command simply answers "hello! 😃"'
-                },
-                {
-                    name: ';kill <@user>',
-                    value: 'This command lets you "kill" someone.'
-                },
-                {
-                    name: ';status <type> <status>',
-                    value: 'This command lets the bot\'s creator to change the bot\'s status!'
-                },
-                {
-                    name: ';ping',
-                    value: 'This command lets you check the bot\'s ping!'
-                },
-                {
-                    name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
-                    value: 'This command lets you launch someone into space.'
+                    name: 'For a list of administrator commands',
+                    value: 'type `;help admin`',
                 }
             )
-	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
-        message.channel.send(embed);
+            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
+            message.channel.send(embed);
+        }
+        else if(arg === 'commands')
+        {
+            require("./help/commands.js").execute(message, Discord, client, embedArgs);
+        }
+        else if(arg === 'admin')
+        {
+            require("./help/admin.js").execute(message, Discord, client, embedArgs);
+        }
+        else
+        {
+            message.channel.send("Invalid argument. Type ;help or ;info for more information.");
+        }
     }
 }
