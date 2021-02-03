@@ -66,6 +66,10 @@ client.on("message", message =>
     {
         client.commands.get('space').execute(message, args, Discord, embedArgs);
     }
+    else if(command === "nick")
+    {
+        client.commands.get('nick').execute(message, args, process.env.OFFICERROLEID);
+    }
 });
 
 client.login(process.env.TOKEN);
