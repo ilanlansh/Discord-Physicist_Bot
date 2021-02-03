@@ -13,8 +13,8 @@ let embedArgs = () =>
     this.guild;
     this.color;
 };
-client.users.fetch("381379655665713155").then(user => { embedArgs.avURL = user.displayAvatarURL() });
-client.guilds.fetch("775377823753568277").then(guild => { embedArgs.guild = guild });
+client.users.fetch(process.env.USERID).then(user => { embedArgs.avURL = user.displayAvatarURL() });
+client.guilds.fetch(process.env.GUILDID).then(guild => { embedArgs.guild = guild });
 embedArgs.color = '#11f5de';
 
 client.commands = new Discord.Collection();
