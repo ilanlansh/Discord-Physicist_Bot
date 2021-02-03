@@ -7,15 +7,15 @@ const client = new Discord.Client();
  
 const prefix = ';';
 
-let data = () =>
+let embedArgs = () =>
 {
     this.avURL;
     this.guild;
     this.color;
 };
-client.users.fetch("381379655665713155").then(user => { data.avURL = user.displayAvatarURL() });
-client.guilds.fetch("775377823753568277").then(guild => { data.guild = guild });
-data.color = '#11f5de';
+client.users.fetch("381379655665713155").then(user => { embedArgs.avURL = user.displayAvatarURL() });
+client.guilds.fetch("775377823753568277").then(guild => { embedArgs.guild = guild });
+embedArgs.color = '#11f5de';
 
 client.commands = new Discord.Collection();
  
@@ -52,11 +52,11 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord, client, data);
+        client.commands.get('help').execute(message, args, Discord, client, embedArgs);
     }
     else if(command === "kill")
     {
-        client.commands.get('kill').execute(message, args, Discord, client, data);
+        client.commands.get('kill').execute(message, args, Discord, client, embedArgs);
     }
     else if(command === "status")
     {
@@ -64,7 +64,7 @@ client.on("message", message =>
     }
     else if(command === "space" || command === "launch" || command === "dispatch")
     {
-        client.commands.get('space').execute(message, args, Discord, data);
+        client.commands.get('space').execute(message, args, Discord, embedArgs);
     }
 });
 

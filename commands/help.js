@@ -2,10 +2,10 @@ module.exports =
 {
     name: 'help',
     description: "this command gives a list of commands.",
-    execute(message, args, Discord, client, data)
+    execute(message, args, Discord, client, embedArgs)
     {
         const embed = new Discord.MessageEmbed()
-            .setColor(data.color)
+            .setColor(embedArgs.color)
             .setTitle("Help (1/1)")
             .setDescription("This is a bot originally made for yaakov3h's physics Discord server. The bot was made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://ilan.shrir.net/).\nHere's a list of commands:")
             .setThumbnail(client.user.displayAvatarURL())
@@ -36,7 +36,7 @@ module.exports =
                     value: 'This command lets you launch someone into space.'
                 }
             )
-	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', data.avURL);
+	        .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
         message.channel.send(embed);
     }
 }
