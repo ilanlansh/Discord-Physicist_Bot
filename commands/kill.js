@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 module.exports = 
 {
     name: 'kill',
-    description: "This command lets you \"kill\" someone.",
+    description: "```This command lets you \"kill\" someone.```",
     async execute(message, args, Discord, client, embedArgs)
     {
         let url = `https://api.tenor.com/v1/search?q=kill&key=${process.env.TENORKEY}&limit=50`;

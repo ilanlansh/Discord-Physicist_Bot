@@ -1,7 +1,7 @@
 module.exports = 
 {
     name: 'help',
-    description: "This command sends info and instructions about the bot.",
+    description: "```This command sends info and instructions about the bot.```",
     execute(message, args, Discord, client, embedArgs)
     {
         arg = args.join(" ");

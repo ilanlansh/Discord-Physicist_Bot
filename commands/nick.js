@@ -1,7 +1,7 @@
 module.exports =
 {
     name: 'nick',
-    description: 'This command lets server administrators change members\' nicknames easily.',
+    description: '```This command lets server administrators change members\' nicknames easily.```',
     execute(message, args, officerRoleID)
     {
         if(!message.member.hasPermission("MANAGE_NICKNAMES"))
