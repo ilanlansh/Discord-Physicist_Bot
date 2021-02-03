@@ -12,7 +12,7 @@ module.exports =
 
         let gif = json.results[Math.floor(Math.random() * json.results.length)].media[0].gif.url;
         
-        let launched = message.mentions.users.first();
+        let launched = message.mentions.members.first();
 
         if(!launched)
         {
@@ -22,7 +22,7 @@ module.exports =
 
         const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)
-            .setTitle(`User   ${embedArgs.guild.member(message.author).displayName}   just launched   ${embedArgs.guild.member(launched).displayName}   into space!`)
+            .setTitle(`User   ${message.member.displayName}   just launched   ${launched.displayName}   into space!`)
             .setImage(gif)
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
 

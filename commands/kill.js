@@ -12,7 +12,7 @@ module.exports =
 
         let gif = json.results[Math.floor(Math.random() * json.results.length)].media[0].gif.url;
         
-        let killed = message.mentions.users.first();
+        let killed = message.mentions.members.first();
 
         if(!killed)
         {
@@ -22,7 +22,7 @@ module.exports =
 
         const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)
-            .setTitle(`User   ${embedArgs.guild.member(message.author).displayName}   just killed   ${embedArgs.guild.member(killed).displayName} !`)
+            .setTitle(`User   ${message.member.displayName}   just killed   ${killed.displayName} !`)
             .setImage(gif)
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
 
