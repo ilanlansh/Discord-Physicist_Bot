@@ -1,3 +1,5 @@
+const format = require("../../util/format.js");
+
 module.exports = 
 {
     execute(message, Discord, client, embedArgs)
@@ -11,23 +13,23 @@ module.exports =
             (
                 {
                     name: ';help / ;info',
-                    value: require("../help.js").description
+                    value: format.codeblock(require("../help.js").description)
                 },
                 {
                     name: ';hi',
-                    value: require("../hi.js").description
+                    value: format.codeblock(require("../hi.js").description)
                 },
                 {
                     name: ';ping',
-                    value: require("../ping.js").description
+                    value: format.codeblock(require("../ping.js").description)
                 },
                 {
                     name: ';kill <@user>',
-                    value: require("../kill.js").description
+                    value: format.codeblock(require("../kill.js").description)
                 },
                 {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
-                    value: require("../space.js").description
+                    value: format.codeblock(require("../space.js").description)
                 }
             )
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);

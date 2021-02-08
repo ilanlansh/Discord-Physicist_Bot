@@ -3,7 +3,7 @@ const TYPES = ["play", "watch", "listen", "stream", "compete"];
 module.exports = 
 {
     name: 'status',
-    description: "```This command lets server administrators change the bot\'s status.```",
+    description: "This command lets server administrators change the bot\'s status.",
     execute(message, args, client)
     {
         if(message.member.hasPermission("ADMINISTRATOR"))
