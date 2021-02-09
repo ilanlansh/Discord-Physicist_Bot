@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
+const format = require("./util/format.js")
 
 const client = new Discord.Client();
  
@@ -52,7 +53,7 @@ client.on("message", message =>
     }
     else if(command === "info" || command === "help")
     {
-        client.commands.get('help').execute(message, args, Discord, client, embedArgs);
+        client.commands.get('help').execute(message, args, Discord, client, embedArgs, format);
     }
     else if(command === "kill")
     {

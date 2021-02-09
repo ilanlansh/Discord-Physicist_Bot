@@ -1,8 +1,6 @@
-const format = require("../../util/format.js");
-
 module.exports = 
 {
-    execute(message, Discord, client, embedArgs)
+    execute(message, Discord, client, embedArgs, format)
     {
         const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)

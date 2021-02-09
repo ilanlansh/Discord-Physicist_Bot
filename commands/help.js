@@ -2,7 +2,7 @@ module.exports =
 {
     name: 'help',
     description: "This command sends info and instructions about the bot.",
-    execute(message, args, Discord, client, embedArgs)
+    execute(message, args, Discord, client, embedArgs, format)
     {
         arg = args.join(" ");
         if(!arg)
@@ -28,11 +28,11 @@ module.exports =
         }
         else if(arg === 'commands')
         {
-            require("./help/commands.js").execute(message, Discord, client, embedArgs);
+            require("./help/commands.js").execute(message, Discord, client, embedArgs, format);
         }
         else if(arg === 'admin')
         {
-            require("./help/admin.js").execute(message, Discord, client, embedArgs);
+            require("./help/admin.js").execute(message, Discord, client, embedArgs, format);
         }
         else
         {
