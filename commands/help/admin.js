@@ -21,4 +21,4 @@ module.exports =
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
         message.channel.send(embed);
     }
-}
+};

@@ -67,4 +67,4 @@ module.exports =
             message.channel.send("You're not allowed to use this!")
         }
     }
-}
+};

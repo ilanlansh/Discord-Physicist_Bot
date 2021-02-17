@@ -39,4 +39,4 @@ module.exports =
             message.channel.send("Invalid argument. Type ;help or ;info for more information.");
         }
     }
-}
+};

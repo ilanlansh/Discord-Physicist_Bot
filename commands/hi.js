@@ -6,4 +6,4 @@ module.exports =
     {
         message.channel.send("Hello! 😃");
     }
-}
+};

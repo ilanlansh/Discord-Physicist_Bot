@@ -10,4 +10,4 @@ module.exports =
                 m.edit(`Pong! **${ping}ms**`);
             });
     }
-}
+};
