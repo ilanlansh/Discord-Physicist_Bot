@@ -25,7 +25,7 @@ module.exports =
      * @param {string} message A string that is meant to be sent as a message.
      * @return {string} An italic version of that messgae string.
      */
-    itali(message)
+    italic(message)
     {
         return `*${message}*`;
     },
