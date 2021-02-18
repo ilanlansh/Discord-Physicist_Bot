@@ -71,6 +71,10 @@ client.on("message", message =>
     {
         client.commands.get('nick').execute(message, args, process.env.OFFICERROLEID);
     }
+    else if(command === "wiki")
+    {
+        client.commands.get('wiki').execute(message, args, Discord, embedArgs);
+    }
 });
 
 client.login(process.env.TOKEN);

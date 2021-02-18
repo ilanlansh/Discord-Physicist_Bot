@@ -28,6 +28,10 @@ module.exports =
                 {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
                     value: format.codeblock(require("../space.js").description)
+                },
+                {
+                    name: ';wiki <query>',
+                    value: format.codeblock(require("../wiki.js").description)
                 }
             )
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
