@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'wiki',
     description: "This command lets you look up wikipedia pages.",
-    async execute(message, args, Discord, embedArgs)
+    async execute(message, args)
     {
 
         let query = args.join(" ");

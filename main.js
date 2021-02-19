@@ -73,7 +73,7 @@ client.on("message", message =>
     }
     else if(command === "wiki")
     {
-        client.commands.get('wiki').execute(message, args, Discord, embedArgs);
+        client.commands.get('wiki').execute(message, args);
     }
 });
 
