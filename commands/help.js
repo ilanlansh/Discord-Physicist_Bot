@@ -10,7 +10,7 @@ module.exports =
             const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)
             .setTitle("Help")
-            .setDescription("This bot was made for the Space Generation Israel Discord server. Made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://github.com/ilanlansh/Discord-BB8_Bot).")
+            .setDescription("This bot was made for Yaakov Hameiri's school Discord server. Made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://github.com/ilanlansh/Discord-BB8_Bot).")
             .setThumbnail(client.user.displayAvatarURL())
             .addFields
             (

@@ -8,14 +8,9 @@ const client = new Discord.Client();
  
 const prefix = ';';
 
-let embedArgs = () =>
-{
-    this.avURL;
-    this.guild;
-    this.color;
-};
+let embedArgs = { };
+
 client.users.fetch(process.env.USERID).then(user => { embedArgs.avURL = user.displayAvatarURL() });
-client.guilds.fetch(process.env.GUILDID).then(guild => { embedArgs.guild = guild });
 embedArgs.color = '#11f5de';
 
 client.commands = new Discord.Collection();
@@ -75,6 +70,10 @@ client.on("message", message =>
     {
         client.commands.get('wiki').execute(message, args);
     }
+    // else if(command === "say")
+    // {
+    //     message.channel.send(args.join(" "));
+    // }
 });
 
 client.login(process.env.TOKEN);

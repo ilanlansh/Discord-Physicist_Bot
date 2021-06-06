@@ -25,15 +25,19 @@ module.exports =
             return;
         }
 
-        message.channel.send(`✅ found **${json[1][0]}** on wikipedia.\n${json[3][0]}`);
-
-        // const embed = new Discord.MessageEmbed()
-        //     .setColor(embedArgs.color)
-        //     .setThumbnail("https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png")
-        //     .setTitle(json[1][0])
-        //     .setURL(json[3][0])
-        //     .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
-
-        // message.channel.send(embed);
+        if(json[3].length >= 5)
+        {
+            message.channel.send(`✅ top 5 results for **${query}** on wikipedia:
+            🔗1️⃣ **${json[1][0]}:**  ${json[3][0]}
+            🔗2️⃣ **${json[1][1]}:**  ${json[3][1]}
+            🔗3️⃣ **${json[1][2]}:**  ${json[3][2]}
+            🔗4️⃣ **${json[1][3]}:**  ${json[3][3]}
+            🔗5️⃣ **${json[1][4]}:**  ${json[3][4]}`);
+        }
+        else
+        {
+            message.channel.send(`✅ top result for **${query}** on wikipedia:
+            🔗 **${json[1][0]}:**  ${json[3][0]}`);
+        }
     }
 };
