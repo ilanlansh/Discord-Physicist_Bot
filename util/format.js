@@ -6,7 +6,7 @@ module.exports =
      * @param {string} message A string that is meant to be sent as a message.
      * @return {string} A codeblock version of that messgae string.
      */
-    codeblock(lang = "txt", message)
+    codeblock(lang, message)
     {
         return `\`\`\`${lang}\n${message}\`\`\``;
     },

@@ -11,19 +11,19 @@ module.exports =
             (
                 {
                     name: ';help / ;info',
-                    value: format.codeblock(require("../help.js").description)
+                    value: format.codeblock('txt', require("../help.js").description)
                 },
                 {
                     name: ';hi',
-                    value: format.codeblock(require("../hi.js").description)
+                    value: format.codeblock('txt', require("../hi.js").description)
                 },
                 {
                     name: ';ping',
-                    value: format.codeblock(require("../ping.js").description)
+                    value: format.codeblock('txt', require("../ping.js").description)
                 },
                 {
                     name: ';kill <@user>',
-                    value: format.codeblock(require("../kill.js").description)
+                    value: format.codeblock('txt', require("../kill.js").description)
                 },
                 {
                     name: ';hug <@user>',
@@ -31,11 +31,11 @@ module.exports =
                 },
                 {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
-                    value: format.codeblock(require("../space.js").description)
+                    value: format.codeblock('txt', require("../space.js").description)
                 },
                 {
                     name: ';wiki <query>',
-                    value: format.codeblock(require("../wiki.js").description)
+                    value: format.codeblock('txt', require("../wiki.js").description)
                 }
             )
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);

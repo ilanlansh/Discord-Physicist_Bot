@@ -11,11 +11,11 @@ module.exports =
             (
                 {
                     name: ';nick <@user> <(nickname)|reset>',
-                    value: format.codeblock(require("../nick.js").description)
+                    value: format.codeblock('txt', require("../nick.js").description)
                 },
                 {
                     name: ';status <type> <status>',
-                    value: format.codeblock(require("../status.js").description)
+                    value: format.codeblock('txt', require("../status.js").description)
                 }
             )
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
