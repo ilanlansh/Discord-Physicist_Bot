@@ -54,6 +54,10 @@ client.on("message", message =>
     {
         client.commands.get('kill').execute(message, args, Discord, client, embedArgs);
     }
+    else if(command === "hug")
+    {
+        client.commands.get('hug').execute(message, args, Discord, client, embedArgs);
+    }
     else if(command === "status")
     {
         client.commands.get('status').execute(message, args, client);

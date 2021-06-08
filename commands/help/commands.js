@@ -26,6 +26,10 @@ module.exports =
                     value: format.codeblock(require("../kill.js").description)
                 },
                 {
+                    name: ';hug <@user>',
+                    value: format.codeblock(require("../hug.js").description)
+                },
+                {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
                     value: format.codeblock(require("../space.js").description)
                 },
