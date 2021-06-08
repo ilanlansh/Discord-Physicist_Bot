@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 module.exports = 
 {
     name: 'hug',
-    description: "This command lets you \"hug\" someone. \n(cr: @L1ghtMare#9051)",
+    description: "This command lets you hug someone! \n// (cr: @L1ghtMare#9051)",
     async execute(message, args, Discord, client, embedArgs)
     {
         let query = "hug";

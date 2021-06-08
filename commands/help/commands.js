@@ -27,7 +27,7 @@ module.exports =
                 },
                 {
                     name: ';hug <@user>',
-                    value: format.codeblock(require("../hug.js").description)
+                    value: format.codeblock('js', require("../hug.js").description)
                 },
                 {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',

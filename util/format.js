@@ -2,12 +2,13 @@ module.exports =
 {
     /**
      * Returns the discord codeblock versrion of a string. (not to be confused with code)
+     * @param {string} lang The programming language that the codeblock will be formatted according to. (eg: js / py / php etc..)
      * @param {string} message A string that is meant to be sent as a message.
      * @return {string} A codeblock version of that messgae string.
      */
-    codeblock(message)
+    codeblock(lang = "txt", message)
     {
-        return `\`\`\`${message}\`\`\``;
+        return `\`\`\`${lang}\n${message}\`\`\``;
     },
 
     /**

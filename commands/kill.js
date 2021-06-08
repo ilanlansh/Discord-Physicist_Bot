@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 module.exports = 
 {
     name: 'kill',
-    description: "This command lets you \"kill\" someone.",
+    description: "This command lets you kill someone!",
     async execute(message, args, Discord, client, embedArgs)
     {
         let query = "kill";
