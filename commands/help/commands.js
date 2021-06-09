@@ -22,6 +22,10 @@ module.exports =
                     value: format.codeblock('txt', require("../ping.js").description)
                 },
                 {
+                    name: ';donut',
+                    value: format.codeblock('js', require("../donut.js").description)
+                },
+                {
                     name: ';kill <@user>',
                     value: format.codeblock('txt', require("../kill.js").description)
                 },

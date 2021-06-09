@@ -46,6 +46,10 @@ client.on("message", message =>
     {
         client.commands.get('ping').execute(message, args);
     }
+    else if(command === "donut")
+    {
+        client.commands.get('donut').execute(message, args);
+    }
     else if(command === "info" || command === "help")
     {
         client.commands.get('help').execute(message, args, Discord, client, embedArgs, format);
