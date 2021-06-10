@@ -42,6 +42,10 @@ client.on("message", message =>
     {
         client.commands.get('hi').execute(message, args);
     }
+    if(command === "sheesh")
+    {
+        client.commands.get('sheesh').execute(message, args);
+    }
     else if(command === "ping")
     {
         client.commands.get('ping').execute(message, args);

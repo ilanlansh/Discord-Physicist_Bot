@@ -18,6 +18,10 @@ module.exports =
                     value: format.codeblock('txt', require("../hi.js").description)
                 },
                 {
+                    name: ';sheesh',
+                    value: format.codeblock('txt', require("../sheesh.js").description)
+                },
+                {
                     name: ';ping',
                     value: format.codeblock('txt', require("../ping.js").description)
                 },
