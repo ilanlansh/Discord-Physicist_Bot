@@ -2,10 +2,21 @@ module.exports =
 {
     name: 'sheesh',
     description: "SHEEEEEEEEEEEEESH",
-    execute(message, args)
+    execute(message, args, format)
     {
-        let urls = ["./resources/videos/sheesh_sinatraa.mp4", "./resources/videos/sheesh_kyedae.mp4"];
-        let url = urls[Math.floor(Math.random()*urls.length)];
-        message.channel.send({files: [url]});
+        let videos = [
+            {
+                title: "Sinatraa Sheesh Out Of Existance.",
+                name: "sheesh_sinatraa.mp4",
+                // path : "./resources/videos/sheesh_sinatraa.mp4"
+            },
+            {
+                title: "Kyedae Sheesh Out Of Existance.",
+                name: "sheesh_kyedae.mp4",
+                // path: "./resources/videos/sheesh_kyedae.mp4"
+            }
+        ];
+        let video = videos[Math.floor(Math.random()*videos.length)];
+        message.channel.send(format.bold(video.title), {files: [`./resources/videos/${video.name}`]});
     }
 };
