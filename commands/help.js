@@ -26,13 +26,13 @@ module.exports =
             .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
             message.channel.send(embed);
         }
-        else if(arg === 'commands')
-        {
-            require("./help/commands.js").execute(message, Discord, client, embedArgs, format);
-        }
         else if(arg === 'admin')
         {
             require("./help/admin.js").execute(message, Discord, client, embedArgs, format);
+        }
+        else if(arg === 'commands')
+        {
+            require("./help/commands.js").execute(message, Discord, client, embedArgs, format);
         }
         else
         {

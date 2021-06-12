@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'kill',
     description: "This command lets you kill someone!",
-    async execute(message, args, Discord, client, embedArgs)
+    async execute(message, Discord, embedArgs)
     {
         let query = "kill";
         let url = `https://api.tenor.com/v1/search?q=${query}&key=${process.env.TENORKEY}&limit=50`;

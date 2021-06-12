@@ -38,54 +38,52 @@ client.on("message", message =>
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === "hi")
-    {
-        client.commands.get('hi').execute(message, args);
-    }
-    if(command === "sheesh")
-    {
-        client.commands.get('sheesh').execute(message, args, format);
-    }
-    else if(command === "ping")
-    {
-        client.commands.get('ping').execute(message, args);
-    }
+    if(false){ /* pass */ }  // idk why I added this, looks cool
+
     else if(command === "donut")
     {
-        client.commands.get('donut').execute(message, args);
+        client.commands.get('donut').execute(message);  // ;donut
     }
-    else if(command === "info" || command === "help")
+    else if(command === "help" || command === "info")
     {
-        client.commands.get('help').execute(message, args, Discord, client, embedArgs, format);
+        client.commands.get('help').execute(message, args, Discord, client, embedArgs, format);  // ;help || ;info
     }
-    else if(command === "kill")
+    else if(command === "hi")
     {
-        client.commands.get('kill').execute(message, args, Discord, client, embedArgs);
+        client.commands.get('hi').execute(message);  // ;hi
     }
     else if(command === "hug")
     {
-        client.commands.get('hug').execute(message, args, Discord, client, embedArgs);
+        client.commands.get('hug').execute(message, Discord, embedArgs);  // ;hug
     }
-    else if(command === "status")
+    else if(command === "kill")
     {
-        client.commands.get('status').execute(message, args, client);
-    }
-    else if(command === "space" || command === "launch" || command === "dispatch")
-    {
-        client.commands.get('space').execute(message, args, Discord, embedArgs);
+        client.commands.get('kill').execute(message, Discord, embedArgs);  // ;kill
     }
     else if(command === "nick")
     {
-        client.commands.get('nick').execute(message, args, process.env.OFFICERROLEID);
+        client.commands.get('nick').execute(message, args, process.env.OFFICERROLEID);  // ;nick
+    }
+    else if(command === "ping")
+    {
+        client.commands.get('ping').execute(message);  // ;ping
+    }
+    if(command === "sheesh")
+    {
+        client.commands.get('sheesh').execute(message, format);  // ;sheesh
+    }
+    else if(command === "space" || command === "launch" || command === "dispatch")
+    {
+        client.commands.get('space').execute(message, Discord, embedArgs);  // ;space || ;launch || ;dispatch
+    }
+    else if(command === "status")
+    {
+        client.commands.get('status').execute(message, args, client);  // ;status
     }
     else if(command === "wiki")
     {
-        client.commands.get('wiki').execute(message, args);
+        client.commands.get('wiki').execute(message, args);  // ;wiki
     }
-    // else if(command === "say")
-    // {
-    //     message.channel.send(args.join(" "));
-    // }
 });
 
 client.login(process.env.TOKEN);

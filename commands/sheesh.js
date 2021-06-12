@@ -2,7 +2,7 @@ module.exports =
 {
     name: 'sheesh',
     description: "SHEEEEEEEEEEEEESH",
-    execute(message, args, format)
+    execute(message, format)
     {
         let videos = [
             {
@@ -16,7 +16,7 @@ module.exports =
                 // path: "./resources/videos/sheesh_kyedae.mp4"
             }
         ];
-        let video = videos[Math.floor(Math.random()*videos.length)];
+        let video = videos[Math.floor(Math.random() * videos.length)];
         message.channel.send(format.bold(video.title), {files: [`./resources/videos/${video.name}`]});
     }
 };

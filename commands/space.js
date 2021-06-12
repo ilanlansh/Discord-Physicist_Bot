@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'space',
     description: "This command lets you launch someone into space.",
-    async execute(message, args, Discord, embedArgs)
+    async execute(message, Discord, embedArgs)
     {
         let url = `https://api.tenor.com/v1/search?q=rocket&key=${process.env.TENORKEY}&limit=50`;
         let response = await fetch(url);

@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'hug',
     description: "This command lets you hug someone! \n// (cr: @L1ghtMare#9051)",
-    async execute(message, args, Discord, client, embedArgs)
+    async execute(message, Discord, embedArgs)
     {
         let query = "hug";
         let url = `https://api.tenor.com/v1/search?q=${query}&key=${process.env.TENORKEY}&limit=50`;
