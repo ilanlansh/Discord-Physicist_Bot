@@ -23,7 +23,7 @@ module.exports =
                     value: 'type `;help admin`',
                 }
             )
-            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
+            .setFooter(`Made by ${embedArgs.creatorusername}`, embedArgs.avURL);
             message.channel.send(embed);
         }
         else if(arg === 'admin')

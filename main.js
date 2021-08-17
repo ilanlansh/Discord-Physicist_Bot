@@ -11,6 +11,7 @@ const prefix = ';';
 let embedArgs = { };
 
 client.users.fetch(process.env.USERID).then(user => { embedArgs.avURL = user.displayAvatarURL() });
+client.users.fetch(process.env.USERID).then(user => { embedArgs.creatorusername = user.username });
 embedArgs.color = '#11f5de';
 
 client.commands = new Discord.Collection();

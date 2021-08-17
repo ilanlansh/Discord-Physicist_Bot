@@ -24,7 +24,7 @@ module.exports =
             .setColor(embedArgs.color)
             .setTitle(`User   ${message.member.displayName}   just launched   ${launched.displayName}   into space!`)
             .setImage(gif)
-            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
+            .setFooter(`Made by ${embedArgs.creatorusername}`, embedArgs.avURL);
 
         message.channel.send(embed);
     }
