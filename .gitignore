@@ -7,3 +7,6 @@ node_modules
 # bot's icon stuff
 *.png
 *.psd
+
+# run.bat
+run.bat
