@@ -4,9 +4,8 @@ node_modules
 # environment variables
 .env
 
-# bot's icon stuff
-*.png
-*.psd
+# Command resources
+resources
 
 # batch files
 .bat
