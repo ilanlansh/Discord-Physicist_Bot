@@ -1,11 +1,4 @@
-# node modules
 node_modules
-
-# environment variables
-.env
-
-# Command resources
 resources
-
-# batch files
-.bat
+.env
+run.bat
