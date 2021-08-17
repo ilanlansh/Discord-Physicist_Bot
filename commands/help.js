@@ -10,7 +10,7 @@ module.exports =
             const embed = new Discord.MessageEmbed()
             .setColor(embedArgs.color)
             .setTitle("Help / Info")
-            .setDescription("This bot was made for Yaakov Hameiri's school Discord server. Made by [𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉#6214](http://github.com/ilanlansh/Discord-Physicist_Bot).")
+            .setDescription(`This bot was made for Yaakov Hameiri's school Discord server. Made by [${embedArgs.creatorusername}#6214](http://github.com/ilanlansh/Discord-Physicist_Bot).`)
             .setThumbnail(client.user.displayAvatarURL())
             .addFields
             (
