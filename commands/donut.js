@@ -1,7 +1,7 @@
 module.exports = 
 {
     name: 'donut',
-    description: "donut.\n// (cr: @𝓛𝓘𝓕𝓔-𝓚 𝓖𝓞𝓛𝓓𝓔𝓝#9621)",
+    description: "donut.",
     execute(message)
     {
         let url = "./resources/GIFs/spinning_dount.gif";

@@ -2,7 +2,8 @@
 const Discord = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
-const format = require("./util/format.js")
+const format = require("./util/format.js");
+const prompt = require("prompt-async");
 
 const client = new Discord.Client();
  
@@ -24,7 +25,7 @@ for(const file of commandFiles)
     client.commands.set(command.name, command);
 }
 
-client.once("ready", () =>
+client.once("ready", async () =>
 {
     console.log(`Logged in as ${client.user.tag}!\n`);
     
@@ -39,7 +40,7 @@ client.on("message", message =>
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(false){ /* pass */ }  // idk why I added this, looks cool
+    if(false) {  }
 
     else if(command === "donut")
     {
@@ -73,7 +74,7 @@ client.on("message", message =>
     {
         client.commands.get('sheesh').execute(message, format);  // ;sheesh
     }
-    else if(command === "space" || command === "launch" || command === "dispatch")
+    else if(command in ["space", "launch", "dispatch"])
     {
         client.commands.get('space').execute(message, Discord, embedArgs);  // ;space || ;launch || ;dispatch
     }
@@ -84,6 +85,14 @@ client.on("message", message =>
     else if(command === "wiki")
     {
         client.commands.get('wiki').execute(message, args);  // ;wiki
+    }
+    else if(command === "otter")
+    {
+        client.commands.get('otter').execute(message, Discord, embedArgs);  // ;otter
+    }
+    else if(command === "base")
+    {
+        client.commands.get('base').execute(message, args);
     }
 });
 

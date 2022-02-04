@@ -17,6 +17,13 @@ module.exports =
                 message.channel.send("please enter a valid Activity Type. [ `play` | `watch` | `listen` | `stream` | `compete` ]");
                 return;
             }
+
+            if(type == "reset")
+            {
+                client.user.setActivity(";help | ;info", { type: 'PLAYING' });
+                message.channel.send(`status has been reset`);
+                return;
+            }
                 
             args.shift();
             let status = args.join(" ");
@@ -37,21 +44,25 @@ module.exports =
             {
                 client.user.setActivity(status, { type: 'PLAYING' });
                 message.channel.send(`status changed to **Playing ${status}**`);
+                return;
             }
             else if(type == "watch")
             {
                 client.user.setActivity(status, { type: 'WATCHING' });
                 message.channel.send(`status changed to **Watching ${status}**`);
+                return;
             }
             else if(type == "listen")
             {
                 client.user.setActivity(status, { type: 'LISTENING' });
                 message.channel.send(`status changed to **Listening to ${status}**`);
+                return;
             }
             else if(type == "compete")
             {
                 client.user.setActivity(status, { type: 'COMPETING' });
                 message.channel.send(`status changed to **Competing in ${status}**`);
+                return;
             }
             else if(type == "stream")
             {
@@ -60,6 +71,7 @@ module.exports =
                     url: 'https://www.twitch.tv/ilanlansh'
                 });
                 message.channel.send(`status changed to **Streaming ${status}**`);
+                return;
             }
         }
         else

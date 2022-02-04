@@ -27,7 +27,7 @@ module.exports =
                 },
                 {
                     name: ';donut',
-                    value: format.codeblock('js', require("../donut.js").description)
+                    value: format.codeblock('txt', require("../donut.js").description)
                 },
                 {
                     name: ';kill <@user>',
@@ -35,7 +35,7 @@ module.exports =
                 },
                 {
                     name: ';hug <@user>',
-                    value: format.codeblock('js', require("../hug.js").description)
+                    value: format.codeblock('txt', require("../hug.js").description)
                 },
                 {
                     name: ';space <@user> / ;launch <@user> / ;dispatch <@user>',
@@ -44,9 +44,13 @@ module.exports =
                 {
                     name: ';wiki <query>',
                     value: format.codeblock('txt', require("../wiki.js").description)
+                },
+                {
+                    name: ';otter',
+                    value: format.codeblock('txt', require("../otter.js").description)
                 }
             )
-            .setFooter('Made by 𝒊𝒍𝒂𝒏𝒍𝒂𝒏𝒔𝒉', embedArgs.avURL);
+            .setFooter(`Made by ${embedArgs.creatorusername}`, embedArgs.avURL);
         message.channel.send(embed);
     }
 };
