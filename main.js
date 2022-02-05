@@ -3,7 +3,6 @@ const Discord = require('discord.js');
 require('dotenv').config();
 const fs = require('fs');
 const format = require("./util/format.js");
-const prompt = require("prompt-async");
 
 const client = new Discord.Client();
  
